@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine Image AI</title>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยงไฟล์ CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="script.js" defer></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>AI ตรวจสอบวัตถุ</h1>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="title">Teachable Machine Image AI</div>
+        <h2>please click button to use AI</h2>
+        <button type="button" onclick="init()">Start</button>
+        <div class="container">
+            <div id="webcam-container"></div>
+            <div class="percentage" style="display: none;">Percentage: <span id="percentage-value">0%</span></div> <!-- แสดงเปอร์เซ็นต์ -->
+        </div>
+        <div id="label-container"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --main-bg-color: #2c3e50; /* สีน้ำเงินเข้ม */
+    --navbar-bg-color: #2980b9; /* สีน้ำเงิน */
+    --button-bg-color: #3498db; /* สีน้ำเงินสด */
+    --button-hover-bg-color: #2980b9; /* สีเมื่อ hover */
+    --text-color: #ffffff; /* สีตัวอักษร */
+    --label-bg-color: #ecf0f1; /* สีพื้นหลังของ Label */
+    --border-color: #3498db; /* สีของขอบ */
+    --shadow-color: rgba(0, 0, 0, 0.3); /* เงา */
+    --animation-duration: 0.5s; /* เวลาในการทำแอนิเมชัน */
+}
+
+/* General styling for body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 45px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; 
+    min-height: 100vh; 
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Gradient background */
+    color: var(--text-color);
+}
+
+/* Navbar styling */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--navbar-bg-color);
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--shadow-color); /* เพิ่มเงาให้ navbar */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0; /* เพิ่ม padding */
+}
+
+nav h1 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 2em; /* ปรับขนาดฟอนต์ */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* เพิ่มเงาให้ข้อความ */
+}
+
+/* Content styling */
+.content {
+    border: 2px solid var(--border-color);
+    border-radius: 15px; /* ปรับให้ขอบมนขึ้น */
+    padding: 30px; /* เพิ่ม padding */
+    background-color: rgba(255, 255, 255, 0.95); /* ปรับสีพื้นหลัง */
+    box-shadow: 0 8px 20px var(--shadow-color); /* เพิ่มเงา */
+    max-width: 600px; /* ปรับขนาดสูงสุด */
+    margin: 100px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow var(--animation-duration); /* การเคลื่อนไหว */
+}
+
+.content:hover {
+    box-shadow: 0 12px 30px var(--shadow-color); /* เพิ่มขนาดเงาเมื่อ hover */
+}
+
+/* Title */
+.title {
+    font-size: 2.5em; /* ปรับขนาดฟอนต์ */
+    font-weight: bold;
+    color: var(--border-color);
+    text-align: center;
+}
+
+/* Button Container Styling */
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+/* Button Styling */
+button {
+    padding: 12px 30px; /* ปรับขนาด padding */
+    font-size: 1em;
+    font-weight: bold;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--animation-duration), transform var(--animation-duration), box-shadow var(--animation-duration); /* เพิ่มการเคลื่อนไหว */
+    box-shadow: 0 4px 10px var(--shadow-color);
+    margin: 0 10px; 
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: translateY(-3px); /* ทำให้ปุ่มลอยขึ้นเมื่อ hover */
+    box-shadow: 0 8px 20px var(--shadow-color); /* เพิ่มเงาเมื่อ hover */
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+
+/* Webcam Container Styling */
+.container {
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0; /* ปรับระยะห่าง */
+    width: auto;
+}
+
+/* Webcam styling */
+#webcam-container {
+    border: 5px solid var(--border-color);
+    padding: 15px; /* เพิ่ม padding */
+    border-radius: 15px; /* ปรับให้ขอบมนขึ้น */
+    background-color: var(--label-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px var(--shadow-color); /* เพิ่มเงา */
+}
+
+/* Percentage styling */
+.percentage {
+    padding: 15px; /* ปรับขนาด padding */
+    border-radius: 15px; /* ปรับให้ขอบมนขึ้น */
+    background-color: var(--label-bg-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
+    color: #333;
+    text-align: center;
+    min-width: 100px; /* ปรับขนาดขั้นต่ำ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em; /* ปรับขนาดฟอนต์ */
+}
+
+/* Label Container Styling */
+#label-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Remove animation for individual label boxes */
+#label-container div {
+    font-size: 1.2em;
+    padding: 10px;
+    background-color: var(--label-bg-color);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    width: fit-content;
+    color: #333;
+    text-align: center;
+}
+
+
+/* Responsiveness for mobile */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #webcam-container, .percentage {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    #label-container div {
+        font-size: 1em;
+    }
+}
+
+/* Additional Styling for better visual hierarchy */
+.title, h2 {
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--border-color);
+    text-align: center;
+}
+
+/* Animation for the percentage bar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.percentage {
+    animation: fadeIn var(--animation-duration);
+}
+
+/* Card-style layout for labels */
+#label-container div {
+    transition:box-shadow var(--animation-duration);
+}
+
+#label-container div:hover {
+    box-shadow: 0 8px 20px var(--shadow-color); /* เงาเมื่อ hover */
+}
